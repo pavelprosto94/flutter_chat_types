@@ -42,6 +42,7 @@ const _$StatusEnumMap = {
 
 const _$MessageTypeEnumMap = {
   MessageType.custom: 'custom',
+  MessageType.audio: 'audio',
   MessageType.file: 'file',
   MessageType.image: 'image',
   MessageType.text: 'text',

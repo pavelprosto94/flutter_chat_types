@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 import 'messages/custom_message.dart';
+import 'messages/audio_message.dart';
 import 'messages/file_message.dart';
 import 'messages/image_message.dart';
 import 'messages/text_message.dart';
@@ -9,7 +10,7 @@ import 'preview_data.dart' show PreviewData;
 import 'user.dart' show User;
 
 /// All possible message types.
-enum MessageType { custom, file, image, text, unsupported }
+enum MessageType { custom, audio, file, image, text, unsupported }
 
 /// All possible statuses message can have.
 enum Status { delivered, error, seen, sending, sent }
@@ -38,6 +39,8 @@ abstract class Message extends Equatable {
     switch (type) {
       case 'custom':
         return CustomMessage.fromJson(json);
+      case 'audio':
+        return AudioMessage.fromJson(json);
       case 'file':
         return FileMessage.fromJson(json);
       case 'image':

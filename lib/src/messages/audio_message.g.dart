@@ -1,17 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'image_message.dart';
+part of 'audio_message.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ImageMessage _$ImageMessageFromJson(Map<String, dynamic> json) => ImageMessage(
+AudioMessage _$FileMessageFromJson(Map<String, dynamic> json) => AudioMessage(
       author: User.fromJson(json['author'] as Map<String, dynamic>),
       createdAt: json['createdAt'] as int?,
-      height: (json['height'] as num?)?.toDouble(),
       id: json['id'] as String,
       metadata: json['metadata'] as Map<String, dynamic>?,
+      mimeType: json['mimeType'] as String?,
       name: json['name'] as String,
       remoteId: json['remoteId'] as String?,
       roomId: json['roomId'] as String?,
@@ -20,10 +20,9 @@ ImageMessage _$ImageMessageFromJson(Map<String, dynamic> json) => ImageMessage(
       type: $enumDecodeNullable(_$MessageTypeEnumMap, json['type']),
       updatedAt: json['updatedAt'] as int?,
       uri: json['uri'] as String,
-      width: (json['width'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$ImageMessageToJson(ImageMessage instance) =>
+Map<String, dynamic> _$AudioMessageToJson(AudioMessage instance) =>
     <String, dynamic>{
       'author': instance.author.toJson(),
       'createdAt': instance.createdAt,
@@ -34,11 +33,10 @@ Map<String, dynamic> _$ImageMessageToJson(ImageMessage instance) =>
       'status': _$StatusEnumMap[instance.status],
       'type': _$MessageTypeEnumMap[instance.type],
       'updatedAt': instance.updatedAt,
-      'height': instance.height,
+      'mimeType': instance.mimeType,
       'name': instance.name,
       'size': instance.size,
       'uri': instance.uri,
-      'width': instance.width,
     };
 
 const _$StatusEnumMap = {
